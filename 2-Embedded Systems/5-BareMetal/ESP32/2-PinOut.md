@@ -45,3 +45,18 @@ ESP32 boards usually have between 30 to 40 pins. Here are the primary pin groups
                                  +----------+
 								  EN     BOOT
 ```
+
+Notes:
+GPIO0/D0     (Warning) must be HIGH during boot and LOW for programming
+GPIO1/TX0    (Don't Use) Tx pin, used for flashing and debugging
+GPIO2/D2      (Warning) must be LOW during boot and also connected to the on-board LED
+GPIO3/RX0    (Don't Use) Rx pin, used for flashing and debugging
+GPIO5/D5       (Warning) must be HIGH during boot
+GPIO6-11/D6-11  (Don't Use) Connected to Flash memory
+GPIO12/D12    (Warning) must be LOW during boot
+GPIO15/D15    (Warning) must be HIGH during boot, prevents startup log if pulled LOW
+
+Input only GPIOs
+Pins GPIO34, GPIO35, GPIO36(VP) and GPIO39(VN) cannot be configured as outputs. 
+They can be used as digital or analog inputs, or for other purposes.
+They also lack internal pull-up and pull-down resistors, unlike the other GPIO pins.
