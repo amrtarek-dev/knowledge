@@ -1,0 +1,14 @@
+
+- Free to obtain/modify the source code (Permissive)
+	- You don't need to share your source code with customers
+		- BSD (Berkeley Software Distribution)
+		- MIT (Massachusetts Institute of Technology)
+- Everyone gets access to your source code if it's derivative work. (Copyletf)
+	 - GPL (Gnu Public License)
+		 - LGPL (link to it, but do not edit) (edit = share)
+			 - Used for libraries (like GCC libraries)
+			 - Share library modifications, not your code, providing your code makes use of an "interface provided by the Library".
+		 - GPLv2 vs v3
+			 - TiVo prevented Linux modifications in hardware
+			 - GPLv3 specifically prevents this use case.
+			 - However, the linux kernel is still GPLv2
