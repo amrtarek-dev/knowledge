@@ -48,3 +48,9 @@ bitbake -c fetchall core-image-minimal
 And to clean a built recipe:
 ``` bash
 bitbake -c cleanall busybox
+```
+
+To debug a recipe
+``` bash
+bitbake -c devshell <recipe name>
+```

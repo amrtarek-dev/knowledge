@@ -44,3 +44,9 @@ and if it was already forced push, you can pull it by
 ```bash
 git pull --rebase
 ```
+
+
+> Push with specific ssh key by
+``` bash
+git config core.sshCommand "ssh -i ~/.ssh/your_specific_key"
+```
