@@ -54,3 +54,26 @@ Security analyst technical skills:
 - Intrusion detection systems (IDSs)
 - Thread landscape knowledge
 - Incident response
+
+Cybersecurity importance: to prevent incidents that may expose people's personally identifiable information.
+**Personal identifiable information** (PII), is any information used to infer an individual's identity includes full name, date of birth, physical address, phone number, email address, internet protocol, or IP address and similar information.
+**Sensitive personal identifiable Information (SPII)**, a specific type of PII that falls under stricter handling guidelines includes social security number, medical or financial information, and biometric data, like facial recognition.
+
+A **computer virus** is malicious code written to interfere with computer operations and cause damage to data and software.
+The virus attaches itself to programs or documents on a computer, then spreads and infects one or more computers in a network.
+Nowadays it called Malware, which is a software designed to harm devices or networks.
+Most Famous 2 are:
+- Brain virus
+- Morris worm
+
+After Morris worm, a **Computer Emergency Response Teams (CERTs)** were established to respond to computer security incidents. 
+
+Social engineering is a manipulation technique that exploits human error to gain private information, access or valuables.
+Like LoveLetter attack
+
+Phishing is the use of digital communication to trick people into revealing sensitive data or deploying malicious software.
+- **Business Email Compromise (BEC):** A threat actor sends an email message that seems to be from a known source to make a seemingly legitimate request for information, in order to obtain a financial advantage.
+- **Spear phishing:** A malicious email attack that targets a specific user or group of users. The email seems to originate from a trusted source
+- **Whaling:** A form of spear phishing. Threat actors target company executives to gain access to sensitive data.
+- **Vishing:** The exploitation of electronic voice communication to obtain sensitive information or to impersonate a known source.
+- **Smishing:** The use of text messages to trick users, in order to obtain sensitive information or to impersonate a known source.
