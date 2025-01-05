@@ -39,4 +39,24 @@ The international Court of Justice (ICJ) states that a person or group can count
 **Privacy protection** means safeguarding personal information from unauthorized use.
 **Laws** are rules that are recognized by a community and enforced by a governing entity.
 
-**Health Insurance Portability and Accountability Act (HIPAA)**
+**Health Insurance Portability and Accountability Act (HIPAA):** A U.S. federal law established to protect patients' health information
+
+**Integrity:** The idea that the data is correct, authentic, and reliable
+
+**National Institute of Standards and Technology (NIST) Cyber Security Framework (CSF):** A voluntary framework that consists of standards, guidelines, and best practices to manage cybersecurity risk
+
+**Privacy protection:** The act of safeguarding personal information from unauthorized use
+
+**Protected health information (PHI):** Information that relates to the past, present, or future physical or mental health or condition of an individual
+
+**Security architecture:** A type of security design composed of multiple components, such as tools and processes, that are used to protect an organization from risks and external threats
+
+**Security controls:** Safeguards designed to reduce specific security risks
+
+**Security ethics:** Guidelines for making appropriate decisions as a security professional
+
+**Security frameworks:** Guidelines used for building plans to help mitigate risk and threats to data and privacy
+
+**Security governance:** Practices that help support, define, and direct security efforts of an organization
+
+**Sensitive personally identifiable information (SPII):** A specific type of PII that falls under stricter handling guidelines
