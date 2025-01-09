@@ -5,23 +5,37 @@ Frameworks have four core components:
 - setting guidelines to achieve security goals.
 - implementing strong security processes.
 - monitoring and communicating results
+Organizations often uses framework to create there own security policies and processes.
 
+Cyber Threat Framework (CTF) is a common language for describing and communicating information about cyber threat activity.
+
+ISO/IEC 27001 (International Organization for Standardization) / International Electrotechnical Commission
+the ISO 27000 family standards enables organizations of all sectors and sizes to manage the security of assets.
+
+It outlines requirements for an information security management system, best practices and controls that support an organization's ability to manage risks.
 ## Security Controls
-Are the safeguards designed to reduce specific security risks.
+Are the safeguards designed to reduce specific security risks. they are the measures organizations use to lower risk and threats to data and privacy.
+By three type of controls:
+- Encryption
+- Authentication
+- Authorization
+
+Encryption is the process of converting data from a readable format (plan-text) to an encoded format (Cipher-text).
+
+Authentication is the process of verifying who someone or something is.
+
+Authorization is the concept of granting access to specific resources within a system (the person has permission to access)
+
+
 ## CIA triad
 A foundation model that helps inform how organizations consider risk when setting up systems and security policies.
 - Confidentiality
 - Integrity
-- Accessibility
+- Availability
 Confidentiality: only the authorized users can access specific assets or data.
 Integrity: data is correct, authentic, and reliable.
 Availability: Data is accessible to those who are authorized to access it.
 
-NIST Cybersecurity Framework (CSF)
-National Institute of Standards and Technology
-A voluntary framework that consists of standards, guidelines, and best practices to manage cybersecurity risk.
-
-And NIST Risk Management Framework (RMF)
 
 ## Security Ethics
 Are guideline for making appropriate decisions as a security professional.

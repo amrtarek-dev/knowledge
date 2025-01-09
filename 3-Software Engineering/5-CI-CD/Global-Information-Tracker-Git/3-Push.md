@@ -50,3 +50,18 @@ git pull --rebase
 ``` bash
 git config core.sshCommand "ssh -i ~/.ssh/your_specific_key"
 ```
+
+## Edit the last commit
+Edit the last files
+``` bash
+git commit --amend
+```
+Edit only the commit message without files change
+``` bash
+git commit --amend --no-edit
+```
+Edit the Author
+``` bash
+git commit --amend --no-edit --author"Amr Tarek <amr.tarek@example.com>"
+```
+> You have to force push after using `--amend` by using `git push --force`
