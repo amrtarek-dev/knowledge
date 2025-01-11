@@ -2,15 +2,7 @@
 
 **Compliance** is the process of adhering to internal standards and external regulations and enables organizations to avoid fines and security breaches.
 
-**Security frameworks** are guidelines used for building plans to help mitigate risks and threats to data and privacy.
-
-**Security controls** are safeguards designed to reduce specific security risks. They are used with security frameworks to establish a strong security posture.
-
-**Security posture** is an organization’s ability to manage its defense of critical assets and data and react to change. A strong security posture leads to lower risk for the organization.
-
 A **threat actor**, or malicious attacker, is any person or group who presents a security risk. This risk can relate to computers, applications, networks, and data.
-
-An **internal threat** can be a current or former employee, an external vendor, or a trusted partner who poses a security risk. At times, an internal threat is accidental. For example, an employee who accidentally clicks on a malicious email link would be considered an accidental threat. Other times, the internal threat actor _intentionally_ engages in risky activities, such as unauthorized data access.
 
 **Network security** is the practice of keeping an organization's network infrastructure secure from unauthorized access. This includes data, services, systems, and devices that are stored in an organization’s network.
 

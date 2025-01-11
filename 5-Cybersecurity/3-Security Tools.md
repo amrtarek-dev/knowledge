@@ -4,10 +4,12 @@
 A log is a record of events that occur within an organization's systems.
 i.e. security related logs include records of employees signing into thier computers or accessing web-based services.
 
+## Security information and event management (SIEM)
 **Security information and event management** (SIEM) tool is an application that collects and analyzes log data to monitor critical activities in an organization, by collecting a real-time information and allow security analysts to identify potential breaches.
 - Splunk (self hosted SIEM solution)
 - Google Chronicla (Cloud-native SIEM sool)
 
+## Playbook
 **Playbook** is a manual that provides details about any operational action, including incident response, security or compliance reviews, access management, and many other organizational tasks that require a documented process from beginning to end.
 
 Packet sniffer (Network protocol analyzer) is a tool designed to capture and analyze data traffic within network.

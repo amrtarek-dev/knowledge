@@ -29,6 +29,14 @@ Policies and procedures that ensure data is properly stored, maintained, retaine
 Optimizes data security by ensuring effective tools, systems, and process are in place to protect the organization's assets and data.
 - Shared Responsibility: All individuals within an organization take an active role in lowering risk and maintaining both physical and virtual security.
 Having policies that enables the users to recognize and report security concers.
+- Threat modeling
+- Least privilege
+- Defense in depth
+- Fail securely
+- Separation of duties
+- Keep it simple
+- Zero trust
+- Trust but verify
 
 ## 4. Communications and Network Security
 Manage and secure physical networks and wireless communications.
@@ -53,7 +61,16 @@ Conducting investigations and implementing preventative measures.
 - Investigation begin once a security incident has been identified.
 - If there is an active attack, mitigating the attack and preventing it from escalating further is essential.
 - A digital forensic investigation must take place after attack to identify (when, how, why) the breach occured.
-
+using tools such as:
+- Training and awareness
+- Reporting and documentation
+- Intrusion detection and prevention
+- SIEM tools   
+- Log management
+- Incident management
+- Playbooks
+- Post-breach forensics
+- Reflecting on lessons learned
 ## 8. Software development security
 uses secure coding practices, 
 which are a set of recommended guidelines that are used to create secure applications and services.
