@@ -36,14 +36,46 @@ https://www.ready.gov/business/emergency-plans/recovery-plan
 
 **Logs** are the source of data that the tools we'll cover are designed to organize.
 
-A log is a record of events that occur within an organization's systems.
+A log is a record of events that occur within an organization's systems and networks.
 i.e. security related logs include records of employees signing into thier computers or accessing web-based services.
+Common log sources:
+- **Firewall logs**: Is a record of attempted of established connections for incoming traffic from the internet, includes outbound requests to the internet from the network.
+- **Network logs**: is a record of all computers and devices that enter and leave the network, includes connections between devices and services on the network
+- **Server logs**: is a record of events related to services (Websites, emails, file shares) includes login, password, and username requests.
 
 ## Security information and event management (SIEM)
 **Security information and event management** (SIEM) tool is an application that collects and analyzes log data to monitor critical activities in an organization, by collecting a real-time information and allow security analysts to identify potential breaches.
 - Splunk (self hosted SIEM solution)
 - Google Chronicla (Cloud-native SIEM sool)
 
+## Software application Metrics
+are key technical attributes such as response time, availability, and failure rate, which are used to assess the performance of the software application.
+
+-  **Security posture dashboard**: designed for security operations centers (SOCs) , It displays the last 24 hours of an organization’s notable security-related events and trends
+-  **Executive summary dashboard**: analyzes and monitors the overall health of the organization over time
+-  **Incident review dashboard**: allows analysts to identify suspicious patterns that can occur in the event of an incident
+-  **Risk analysis dashboard**: identify risk for each risk object (e.g., a specific user, a computer, or an IP address). It shows changes in risk-related activity or behavior, such as a user logging in outside of normal working hours or unusually high network traffic from a specific computer.
+-  **Enterprise insights dashboard**: identifies suspicious domain names in logs, known as indicators of compromise (IOCs). Each result is labeled with a confidence score to indicate the likelihood of a threat.
+-  **Data ingestion and health** **dashboard**: shows the number of event logs, log sources, and success rates of data being processed into Chronicle.
+-  **IOC** **matches** **dashboard**: indicates the top threats, risks, and vulnerabilities to the organization.
+-  **Main** **dashboard**: displays a high-level summary of information related to the organization’s data ingestion, alerting, and event activity over time.
+- **Rule detections** **dashboard**: provides statistics related to incidents with the highest occurrences, severities, and detections over time.
+-  **User sign in overview** **dashboard**: overview dashboard provides information about user access behavior across the organization.
+
+## SIEM Tools types
+- Self-hosted (Own physical infrastructure)
+- Cloud-hosted (Accessible through the internet)
+
+### Splunk
+- Splunk Enterprise (self-hosted SIEM tool)
+- Splunk Cloud (cloud only environment)
+### Google's Chronicle
+- Cloud native tool designed to retain analyze and search data.
+###  Suricata
+Network analysis and threat detection software is used to inspect network traffic to identify suspicious behavior and generate network data logs.
+
+## Security Orchestration, automation,  and response (SOAR)
+Is a collection of applications, tools, and workflows that uses automation to respond to security events. by Open Information Security Foundation (OISF).
 ## Playbook
 **Playbook** is a manual that provides details about any operational action, including incident response, security or compliance reviews, access management, and many other organizational tasks that require a documented process from beginning to end.
 
