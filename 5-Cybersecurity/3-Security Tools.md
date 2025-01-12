@@ -1,4 +1,39 @@
 
+## Security Audit
+A review of an organization's security controls, policies , and procedures against a set of expectations.
+There are 2 main types of security audits:
+- External
+- Internal: Conducted by a team of people that might include an oraganization's compliance office, security manager, and other security team members.
+	- Identify organizational risk
+	- Assess controls
+	- Correct compliance issues
+## Internal Security Audit
+Steps:
+- Establishing the scope and goals
+	- Scope requires organization to identify people, assets, policies, procedures and technologies that impact the security posture.
+	- Goals are outline of the organization's security objectives.
+- Conducting a risk assessment
+	- Focused on identifying potential threats, risks, and vulnerabilities
+- Completing a controls assessment
+	- Reviewing an organization's existing assets, then evaluating potential risks to those assets, to ensure internal controls and processes are effective.
+	- Control categories:
+		- Administrative controls: related to human component
+		- Technical Controls: Hardware and Software solutions to protect assets. (IDS)
+		- Physical Controls: prevent physical access to protected assets, (CCTV)
+- Assessing compliance
+	- determining whether or not the organization is adhering to necessary compliance regulations. (GDPR, PCI DSS)
+- Communicating result to stakeholders.
+	- Summarizes scope and goals
+	- Lists existing risks
+	- Notes how quickly those risks need to be addressed
+	- Identifies compliance regulations.
+	- Provide recommendations for security posture.
+
+https://www.nist.gov/cyberframework/assessment-auditing-resources
+https://www.ready.gov/business/emergency-plans/recovery-plan
+
+## Security tools
+
 **Logs** are the source of data that the tools we'll cover are designed to organize.
 
 A log is a record of events that occur within an organization's systems.
