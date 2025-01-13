@@ -76,8 +76,24 @@ Network analysis and threat detection software is used to inspect network traffi
 
 ## Security Orchestration, automation,  and response (SOAR)
 Is a collection of applications, tools, and workflows that uses automation to respond to security events. by Open Information Security Foundation (OISF).
+
 ## Playbook
 **Playbook** is a manual that provides details about any operational action, including incident response, security or compliance reviews, access management, and many other organizational tasks that require a documented process from beginning to end.
+it also clarify what tools should be used in response to security incident.
+
+- Incident response is an organization's quick attempt to identify an attack contain the damage, and correct the effects of a security breach
+### Six phases of mitigate and manage incidents
+- Preparation: by documenting procedures, establishing staffing plans and educating users.
+- Detection and analysis: using the defined processes and technology.
+- Containment
+- Eradication and recovery (IT restoration)
+- Post incident activity: documenting the incident and report to stakeholders and avoid next one.
+- Coordination: reporting and sharing information based on established standard.
+
+https://www.ncsc.gov.uk/section/about-ncsc/incident-management
+https://www.cyber.gov.au/sites/default/files/2023-03/ACSC%20Cyber%20Incident%20Response%20Plan%20Guidance_A4.pdf
+https://www.jpcert.or.jp/english/vh/guidelines.html
+https://www.cyber.gc.ca/en/guidance/ransomware-playbook-itsm00099
 
 Packet sniffer (Network protocol analyzer) is a tool designed to capture and analyze data traffic within network.
 - tcpdump
