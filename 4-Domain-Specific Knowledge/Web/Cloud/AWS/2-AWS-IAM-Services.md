@@ -32,13 +32,13 @@ Use it to create the user's and assign them to groups.
 	- Version: policy language version, always include "2012-10-17"
 	- Id: an identifier for the policy (Optional)
 	- Satarement: one or more individual statements (required)
-- Satatements consists of
+- Statements consists of
 	- Sid: an identifier for the statement (Optional) 
 	- Effect: whether the statement allows or denies access (Allow, Deny)
 	- Principal: account /user/ role/ to which this policy applied to 
 	- Action: list of actions this policy allows or denies
 	- Resource: list of resources to which the actions applied to 
-	- Condition: contions for when this policy is in effect (optional)
+	- Condition: conditions for when this policy is in effect (optional)
 ### IAM Password Policy
 You can setup a password policy
 Or use **MFA** (Multi Factor Authentication)

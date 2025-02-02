@@ -27,6 +27,7 @@ Job titles:
 - Cybersecurity analyst or specialist
 - Security Operations Center (SOC) analyst
 - Information security analyst.
+- Digital Forensics and Incident Response.  (DFIR)
 
 Security Analyst are responsible:
 - For monitoring and protecting information and systems.
@@ -50,6 +51,11 @@ Security analyst technical skills:
 Cybersecurity importance: to prevent incidents that may expose people's personally identifiable information.
 **Personal identifiable information** (PII), is any information used to infer an individual's identity includes full name, date of birth, physical address, phone number, email address, internet protocol, or IP address and similar information.
 **Sensitive personal identifiable Information (SPII)**, a specific type of PII that falls under stricter handling guidelines includes social security number, medical or financial information, and biometric data, like facial recognition.
+
+The Three C's:
+- Command
+- Control
+- Communications
 
 A **computer virus** is malicious code written to interfere with computer operations and cause damage to data and software.
 The virus attaches itself to programs or documents on a computer, then spreads and infects one or more computers in a network.

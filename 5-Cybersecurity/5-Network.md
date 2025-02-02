@@ -33,7 +33,7 @@ A **firewall** is a network security device that monitors traffic to or from you
 
 Cloud computing is the practice of using remote servers, applications, and network services that are hosted on the internet instead of on local physical devices.
 
-A cloud network is a collection of servers or computers that stores resources and data in a remote data center that can be accessed via the internet. 
+**A cloud network is a collection of servers or computers that stores resources and data in a remote data center that can be accessed via the internet.** 
 
 Because companies don't house the servers at their physical location, these servers are referred to as being "in the cloud".
 
