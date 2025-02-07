@@ -1,0 +1,260 @@
+Linux is open-source operating system by Linus Toravalds as a revolutionary Kernel from UNIX operating system
+
+Richard Stallman started working on GNU which is an operating system based on UNIX.
+
+Stallman shared Torvalds' goal of creating software that was free and open to anyone. 
+After working on GNU for a few years, the missing element for the software was a kernel. 
+Together, Torvalds' and Stallman’s innovations made what is commonly referred to as Linux.
+
+
+## Components of Linux
+- User: the person interacting with a computer
+- Applications
+- Shell
+- Filesystem Hierarchy Standard
+- Kernel
+- Hardware
+
+User: linux is a multiuser system, so multiple users can use the system resources at the same time.
+
+Application: A program that performs a specific task. ex: nano
+- Package manager: is a tool that helps users install, manage, and remove packages or applications.
+
+Shell: The command-line interpreter.( it process the commands and output the results).
+
+FHS: The component of the Linux OS that organizes data.
+
+Kernel: The component of the Linux OS that manages processes and memory. 
+- It communicate with the hardware to execute the command sent by the shell.
+- It uses drivers to enable the applications to execute tasks.
+
+Hardware: The physical components of a computer (CPU, Mouse, Keyboard).
+- Peripheral Devices are hardware components that are attached and controlled by the computer system
+- Internal Hardware are components required to run the computer.
+	- RAM (Random Access Memory) (Short term memory)
+	- Hard drive (Long term memory)
+
+### Distributions
+The different versions of Linux (Flavors), Different distributions are used for different reasons because it contain different preinstalled programs, user interfaces, and much more.
+- Linux kernel
+- Utilities
+- Package management system
+- Installer
+> Different Linux distributions use the same kernel.
+
+Parent distributions:
+- Red Hat, Enterprise Linux, (CentOS)
+- Slackware (SUSE)
+- Debian (Ubuntu and KALI LINUX)
+
+## KALI LINUX
+It is the trademark of Offensive Security and Debian derived.
+Open source distro for penetration testing and digital forensics in mind.
+
+**Penetration test**: A simulated attack that helps identify vulnerabilities in systems, networks, websites, applications, and processes.
+
+Penetration Testing tools in KALI LINUX:
+- Metasploit: look for and exploit vulnerabilities on machines.
+- Burp Suite: weaknesses in web applications.
+- John the Ripper: Guess passwords.
+
+**Digital Forensics**: The practice of collecting and analyzing data to determine what has happened after an attack.
+
+Digital Forensics tools in KALI LINUX:
+- tcpdump: command line packet analyzer.
+- Wireshark: GUI packet analyzer.
+- Autopsy: Analyze hard driver and smartphones.
+- Suricata: Network analysis tool used to for intrusion detection.
+
+### Ubuntu
+Open-source, user-friendly distribution used in security and other industries.
+
+### Parrot
+Open-source, Debian based, similar to KALI LINUX with pre-installed penetration testing and digital forensics software.
+User-friendly GUI and CLI.
+
+### Red Hat (Enterprise Linux)
+Subscription-based distributions of Linux build for enterprise use.
+
+### AlmaLinux
+A community-driven Linux distribution to replace the CentOS 8 (December 2021)
+
+## Package Manager
+A **package** is a piece of software that can be combined with other packages to form an application. Some packages may be large enough to form applications on their own.
+
+**package manager** is a tool that helps users install, manage, and remove packages or applications. Linux uses multiple package managers.
+- Red Hat Package Manager (RPM) (extensions = .rpm)
+- dpkg (Debian pakage) for Debian (extensions = .deb)
+
+
+Package manager tool:
+- APT (Advanced Package Tool): Debian
+- YUM (Yellowdog Updater Modified): Red Hat
+
+
+## Shell
+The command line interpreter, it helps to communicate with the OS through the command line.
+
+Command is an instruction telling the computer to do something
+Types:
+- Bourne shell,
+- (bash) Bourne-Again Shell
+- (csh) C shell
+- (tcsh) Enhanced C shell
+- (ksh) Korn Shell
+- (zsh) Z shell
+
+**Standard Input**
+Information received by the OS via the command line.
+
+**Standard Output**
+Information returned by the OS through the shell
+
+**Standard Error**
+Error messages returned by the OS through the shell
+
+``` bash
+echo hello
+expr 32 - 8
+clear
+```
+
+**Command argument**: is a specific information needed by a command
+
+FHS (Filesystem Hierarchical System): the root directory is the highest-level directory in linux "/"
+## Filesystem Hierarchy Standard (FHS)
+
+The FHS organizes data
+- File path is the location of a file or directory
+	- Absolute file path (from root)
+	- relative file path (from the current directory) (.) for current, (../) for previous.
+- /: Root directory is the highest directory in Linux
+- /home: each user in the system gets their own home directory
+- /etc: configuration directory
+- /tmp: stores many temporary file (attackers can modify data in these file)
+- /mnt: Mount and stores media (USB, hard drives)
+
+> 'man hier' will gives you the directory descriptions.
+
+#### Navigate file system:
+- **pwd** print the working directory onto the screen.
+- **ls** Displays the names of the files and directories.
+- **cd** Change directory. 
+	- (cd ..) for up directory
+
+#### Reading file content
+- **cat** Displays the content of a file
+- **less** like cat but one page at a time.
+	- space bar (next page)
+	- b (back page)
+	- Down arrow (next line)
+	- Up arrow (up line)
+	- q (Quit)
+- **head** Displays the beginning of the a file (10 lines)
+	- head -n 'number of lines'
+- **tail** Displays the ending of the file. 
+
+### Filtering
+- grep: searches a specified file and returns all lines in the file containing a specified string.
+``` bash
+grep OS updates.txt
+```
+
+- | piping: it sends the standard output of one command as standard input to another command for further processing.
+	- echo > filename: to send the echo output to the filename
+	- echo >> file: to append the file.
+
+- find: command searches for directories and files that meet specified criteria.
+	- find ./ -name "file name"
+	- find ./ -iname "non case sensitive name"
+	- find ./ -mtime -1 "file name"
+		- find by days
+	- find ./ -mmin +10 "file name"
+		- find by minutes
+
+#### Modify directories and files
+- **mkdir**: creates a new directory
+- rmdir: removes a directory
+- touch: creates a new file
+- rm: removes a file
+- mv: moves a file
+- cp: copy a file
+
+### Permissions
+The type of access granted for a file or directory
+
+Authorization:
+The concept of granting access to specific resources in a system.
+
+Permissions in Linux:
+1. Read (r)
+	1. For files means that you can read the file
+	2. For folders means you can read files inside this folder
+2. Write (w)
+	1. For files means you can modify this file
+	2. For folders means you can create a new files in this folder
+3. Execute (x)
+	1. for files allow it to execute if it is executable.
+	2. Allows entering (`cd`) the directory and accessing files inside.
+
+Owners in Linux:
+1. User
+2. Group: every user is a part of certain group.
+3. Other: All other users to the system
+
+Permissions is presented with 10 character string:
+drwxrwxrwx
+d: is the file type (directory), (-) a file
+rwx: user permission
+rwx: group permission
+rwx: Others permission
+
+ls -l : display permissions and file options
+ls -a: display the hidden files and directories
+
+### Change permissions
+- chmod: (Change Mode) changes permissions on files and directories
+- Symbolic Mode:
+	- chmod g+w,o-r access.txt (add write to group and remove read from Others)
+
+### Add and Delete users
+
+Authentication: is the process of a user proving that they are who they say they are in the system
+
+**Root user (superuser)** is a user with elevated privileges to modify the system.
+He can create, modify or delete any file or any program.
+
+2 ways to be superuser:
+- Logging in as root:
+	- It is bad practice because it is a security risk (The root account should be disabled).
+	- It easy to make irresolvable mistakes by type a mistake command (permanently delete a directory).
+	- There is no way to track who exactly ran a command. ( you should use sudo from normal user account).
+- "sudo" It is temporarily grants elevated permissions to specific users. (super user do), the user has to be listed in the sudoers file to be able to run commands as superuser.
+
+**useradd** to add user to the system (Only sudo user can add users).
+``` bash
+sudo useradd newusername
+sudo useradd -g security newusername # primary group
+sudo useradd -G finance newusername # supplemental group
+```
+**usermod** to modifies existing user accounts
+``` bash
+sudo usermod -g security newusername
+sudo usermod -G finance newusername # Will replace the group
+sudo usermod -a -G finance newusername # will append
+```
+- -d: change the user's home directory
+- -l: change the user's login name
+- -L: locks the account so the user can't login.
+
+**userdel** to remove user from the system
+``` bash
+sudo userdel oldusername
+```
+
+- **chown**: change ownership of a file or directory
+``` bash
+sudo chown newuser access.txt
+sudo chown :security access.txt
+sudo chown newuser:security access.txt
+```

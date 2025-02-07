@@ -45,3 +45,45 @@ Up to data OS can be vulnerable:
 	- https://ubuntu.com/security/cves
 - Google Cloud Security Bulletin
 	- https://cloud.google.com/support/bulletins
+
+## Turn on the computer
+- Press the power button
+- Special microchip called BIOS is activated (after 2007) it has replaced by UEFI which contain the booting instructions which loading the bootloader.
+- Bootloader is responsible for starting the operating system.
+
+BIOS: Basic Input/Output System
+UEFI: Unified Extensible Firmware Interface
+To enhance the security of the BIOS
+
+Communication from USER to APPLICATION to OS to HARDWARE.
+
+The OS handles resource and memory management to ensure the limited capacity if the computer system is used where it's needed most
+
+## Virtualization
+is the process of using software to create virtual representations of various physical machines. The term “virtual” refers to machines that don’t exist physically, but operate like they do because their software simulates physical hardware.
+
+Virtual systems don’t use dedicated physical hardware. Instead, they use software-defined versions of the physical hardware.
+
+This means that a single virtual machine has a virtual CPU, virtual storage, and other virtual hardware. Virtual systems are just code.
+
+- A **virtual machine (VM)** is a virtual version of a physical computer. Virtual machines are one example of virtualization.
+
+
+One benefit is that virtualization can provide an isolated environment, or a sandbox, on the physical host machine.
+
+> Although using virtual machines is useful when investigating potentially infected machines or running malware in a constrained environment, there are still some risks. For example, a malicious program can escape virtualization and access the host machine. This is why you should never completely trust virtualized systems.
+
+### Hypervisors
+Hypervisors help users manage multiple virtual machines and connect the virtual and physical hardware.
+Also help with allocating the shared resources of the physical host machine to one or more virtual machines.
+
+## User Interface
+A user interface is a program that allows a user to control the functions of the operating system.
+- GUI - Graphical User Interface.
+- CLI - Command Line interface.
+
+**GUI** is a user interface that uses icons on the screen to manage different tasks on the computer.
+
+**CLI** is a text-based user interface that uses commands to interact with the computer.
+
+CLI is more flexible and more powerful than GUI
