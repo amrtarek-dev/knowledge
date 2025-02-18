@@ -80,7 +80,7 @@ using its Dashboard (A single pane of glass)
 - **Chronicle** is a cloud-native tool designed to retain, analyze, and search data.
 - **Splunk** is another common SIEM tool. Splunk offers different SIEM tool options: Splunk Enterprise and Splunk Cloud.
 
-Port filtering
+#### Port filtering
 A firewall function that blocks or allows certain port numbers to limit unwanted communication. (Only ports that are needed are allowed)
 
 Full packet capture devices allow you to record and analyze all of the data that is transmitted over your network. They also aid in investigating alerts created by an IDS.
@@ -102,10 +102,7 @@ In cloud network hardening we use a server baseline image for all server instanc
 ### IAM (Identity Access management)
 Is a collection of processes and technologies that helps organizations manage digital identities in their environment and authorizes how users can use different cloud resources.
 
-
-CSP (Cloud Service Provider)
-
-The **shared responsibility model** states that the CSP must take responsibility for security involving the cloud infrastructure, including physical data centers, hypervisors, and host operating systems. The company using the cloud service is responsible for the assets and processes that they store or operate in the cloud.
+The **shared responsibility model** states that the CSP (Cloud Service Provider) must take responsibility for security involving the cloud infrastructure, including physical data centers, hypervisors, and host operating systems. The company using the cloud service is responsible for the assets and processes that they store or operate in the cloud.
 
 A **hypervisor** abstracts the host’s hardware from the operating software environment.
 - hypervisors run on the hardware of the host computer. (VMware)

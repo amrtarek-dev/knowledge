@@ -29,32 +29,7 @@ A **firewall** is a network security device that monitors traffic to or from you
 
 **Network diagrams** are maps that show the devices on the network and how they connect.
 
-## Cloud networks
-
-Cloud computing is the practice of using remote servers, applications, and network services that are hosted on the internet instead of on local physical devices.
-
-**A cloud network is a collection of servers or computers that stores resources and data in a remote data center that can be accessed via the internet.** 
-
-Because companies don't house the servers at their physical location, these servers are referred to as being "in the cloud".
-
-A cloud service provider (CSP) offer an alternative to traditional on-premise networks, and allow organizations to have the benefits of the traditional network without storing the devices and managing the network on their own.
-
-CSPs provide three main categories of services:
-
-- **Infrastructure as a service** **(IaaS)** refers to the use of virtual computer components offered by the CSP. These include virtual containers and storage that are configured remotely through the CSP’s API or web console.
-	- Physical data center
-	- Servers networking storage
-- **Platform as a service (PaaS)** refers to tools that application developers can use to design custom applications for their company.
-	- IaaS + operating systems
-	- Database management & development tools
-- **Software as a service (SaaS)** refers to software suites operated by the CSP that a company can use remotely without hosting the software.
-	- PaaS + Cloud-hosting applications.
-
-The organizations using:
-- On-premises
-- cloud environment
-- hybrid cloud environment
-- multi-cloud environment
+## 
 
 ## Data Packet
 a basic unit of information that travels from from one device to another within a network.
