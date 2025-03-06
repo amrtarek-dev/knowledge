@@ -45,8 +45,8 @@ Algorithms:
 The use of a public and private key pair for encryption and decryption of data.
 So the public for encryption and private for decryption.
 Algorithms:
-- RSA (Rivest Shamir Adleman) the name for the 3 creator of the algorithm from (Massachusetts Institute of Technology MIT) with key size: 1024, 2048, or 4096 bits. (for highly sensitive data)
-- DSA (Digital Signature Algorithm) By NIST in 1990's is a complement of RSA in public key infrastructure (PKI) with key length 2048 bits.
+- **RSA** (Rivest Shamir Adleman) the name for the 3 creator of the algorithm from (Massachusetts Institute of Technology MIT) with key size: 1024, 2048, or 4096 bits. (for highly sensitive data)
+- **DSA** (Digital Signature Algorithm) By NIST in 1990's is a complement of RSA in public key infrastructure (PKI) with key length 2048 bits.
 
 
 > Establishing trust between the sender and receiver. is a common weakness for both symmetric and asymmetric encryption. 
