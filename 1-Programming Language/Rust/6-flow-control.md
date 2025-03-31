@@ -1,5 +1,5 @@
-# Rust Control flow
-Rust Control flow if statement, while, loop, for, match.
+# Rust Flow Control
+Rust flow Control:  if statement, while, loop, for, match.
 
 ## if statement
 
