@@ -16,11 +16,13 @@ We will cover here the command line way because I believe that this is the best 
 
 First, you need to install Git on your machine and you can do so from [Git -Downloads](https://git-scm.com/downloads), So After installing git on your system you can initialize your project simply by running :
 ```bash
-$git init test-project
+git init test-project
 ```
 where test-project is your project name. that will initialize an empty git repository in your current directory, or if the project is hosted on a server you can get it by running:
-```bash
-$git clone [URL]
+``` bash
+git clone [URL]
+# or with specific ssh key
+GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa" git clone [URL]
 ```
 where [URL] is the repository link, so once you finish this step you will have a .git folder in your directory which has the repo details and history.
 
@@ -28,8 +30,8 @@ where [URL] is the repository link, so once you finish this step you will have a
 The next thing you will need to do is to set your username and email address. Git will use this information to identify who made specific changes to files.
 - To set username and email run:
 ```bash
-$git config --local user.name "your username"
-$git config --local user.email "your email address"
+git config --local user.name "your username"
+git config --local user.email "your email address"
 ```
 
 **So know your repo is ready to have a file and track its change**
@@ -47,46 +49,46 @@ Untracked files are the files in the same Git repo but the git repo doesn't trac
 - Or by intentionally un-track these files by adding them to a file called **.gitignore**
 You can know what is the tracked and untracked file by running:
 ```bash
-$git status
+git status
 ```
 
 ### Staged
 When you want to add files to be tracked by Git or if the files are already tracked but you edited them (Modified them) you have to add them again to the Git repo, you can **add files one by one** by:
 ```bash
-$git add [file]
+git add [file]
 ```
 or you can **add all files** in the current directory by
 ```bash
-$git add *
+git add *
 ```
 To **list** the staged files and folders by 
 ```bash
-$git diff --staged
+git diff --staged
 ```
 To **reset** the staged files but keep them as modified
 ```bash
-$git reset [file]
+git reset [file]
 ```
 where [file] is the file you want to reset.
 
 ### Modified
 When you edit a file that is already tracked by Git its status is changed to be **modified (M)**, so the Git repo notices a change in the file but you did not add it to the repo yet, so you can **list the Modified files** by:
 ```bash
-$git status
+git status
 ```
 Or you **list only the change that happened to the files**
 ```bash
-$git diff
+git diff
 ```
 
 ### Committed
 Committed is the last stage for the files in the Git repo which is saving the changed files locally in the **local Git repo**, you can commit the stages files and folders to the current local repository by:
 ```bash
-$git commit -m "A commit message"
+git commit -m "A commit message"
 ```
 The **commit message** is a description of the edit you have made to the files and folders, and you can **list all commit messages** by:
 ```bash
-$git log
+git log
 ```
 
 **We will discuss the best way to write the commit message in the comming topics so stay tuned**
