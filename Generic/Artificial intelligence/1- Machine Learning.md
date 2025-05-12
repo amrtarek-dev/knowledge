@@ -1,6 +1,3 @@
-A machine is said to have artificial intelligence if it can interpret data, potentially learn from the data, and use that knowledge to adapt and achieve specific goals.
-
-It is combination of computing power with a lot of data to learn an AI model to give it the ability to make a decision.
 
 ## Learning modes
 The process of learning is how anything can make decisions, like for example humans, animals, or AI systems.
