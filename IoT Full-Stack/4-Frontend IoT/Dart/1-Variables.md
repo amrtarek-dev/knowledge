@@ -1,18 +1,27 @@
+Variables act as placeholders for storing data.
+Data types specify the kind of data a variable can hold.
 # Variables
+Act as a container to hold data that can change over time
 Dart supports static and dynamic type definition,
 by default all variables assigned to `null` value
 
+Dynamic:
+- var: declares a variable without specify its type (it will be know from the assigned value)
+- dynamic: can be any value
+- const: compile time constants
+- final: a variable that only can be set once.
 ### Data types
 - Primitives
-	- int
-	- double
-	- String
+	- null
+	- Numbers
+		- int
+		- double
 	- bool
-	- dynamic
+	- String (single and double quotes)
 - Collection
-	- List
-	- Set
-	- Map
+	- List `[]`
+	- Set `{}`
+	- Map `{}`
 	
 
 Primitives
@@ -75,6 +84,7 @@ var halogens = <String>{};
 // or 
 Set <String> names = {};  // CompactLinkedHashSet<String>
 
+
 // Map (dictionary)
 var gifts = {
 	'first': 'Mug',
@@ -85,7 +95,17 @@ var gifts = {1:'Mug', 2:'T-shirt'}
 var gifts = Map();
 gifts['first'] = 'Mango';
 
+// key, value
+Map<String, int> scores = {
+ 'Alice': 90,
+ 'Bob': 85,
+ 'Charlie': 95,
+}
+
 ```
+
+All variables are objects so you can use a common methods for it like:
+obj.add()
 
 ### Type Conversion
 - strings type

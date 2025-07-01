@@ -115,3 +115,55 @@ Classic ports:
 80 = HTTP
 443 = HTTPS
 3389 = RDP (Remote Desktop protocol)
+
+## SSH to EC2
+3 ways to connect to EC2 by SSH
+1. SSH command line (Terminal)
+2. Putty
+3. EC2 Instance Connect
+
+Steps:
+- Allow inbound ssh connection from the security group (0.0.0.0/port 22)
+- Have the PEM file ready (download it from the EC2 instance) (chmod 400) or PPK for putty
+
+``` sh
+ssh ec2-user@3.250.26.200 -i amazon.pem
+```
+> EC2 Instance connect is a web ssh terminal from your browser.
+
+You can control the AWS from the the EC2 and you have to attach a security role to it from IAM service.
+
+## Purchasing Options
+- On-Demain Instances - short workload, predictable pricing, pay by second
+	- Time oriented
+- Reseved (1 & 3 years) (Plan oriented (you know the plan))
+	- Reserved instance (long term workloads)
+	- Convertible Reserved Instances (long term workloads with flexible instances)
+- Savings Plans (1 & 3 years) - Commitment on amount of usage (long workload) (Budget (money oriented))
+- Spot Instances - cheap, can lose instance (short workloads) (Task Oriented)
+- Dedicated Hosts - a physical server (control instance placement) (Hardware Oriented)
+- Dedicated Instances - no other customers will share your hardware (Software Oriented)
+- Capacity Reservations - reserve capacity for any duration (Load oriented)
+
+## Public IP charges
+- IPv4 Charges
+Every public IPv4 is 0.005$ per hour ~ 3.6$ per month (EC2 is the only one which has a free tier (750H/ month)
+- IPv6 Free
+Not all Internet service providers are supporting IPv6 yet.
+
+> You can check the billing in the `Billing and cost management` service to check them.
+
+you can monitor IP address on your account by Amazon VPC IP Address Manager (IPAM)
+
+## Shared Responsibility Model
+who is responsible fro what (AWS<->User)
+
+|                   AWS                    |                          User                          |
+| :--------------------------------------: | :----------------------------------------------------: |
+| Infrastructure (global network security) |                 security Groups rules                  |
+|       Isolation on Physical hosts        |          Operating-System patches and updates          |
+|       Isolation on physical hosts        |  Software and utilities installed on the EC2 instance  |
+|        Replacing faulty hardware         | IAM Roles assigned to EC2 & IAM user access management |
+|          Compliance validation           |             Data security on your instance             |
+
+

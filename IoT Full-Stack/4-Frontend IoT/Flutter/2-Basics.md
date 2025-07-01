@@ -1,4 +1,24 @@
 
+## Prepare the env
+After getting the Flutter SDK
+you can use this command to enable web developing
+
+``` shell
+# if you have a working project
+flutter config --enable-web
+# will add the web support
+```
+
+To check for the available devices
+``` shell
+flutter devices
+```
+
+To check for the flutter environment
+``` shell
+flutter doctor
+```
+
 ## Create a project
 ```bash
 flutter create <project_name>
@@ -10,15 +30,14 @@ In vscode select the emulator from bottom right, and then press f5 button
 ```bash
 # Clean
 flutter clean
-# Run
-flutter run
 # get the packages
 flutter pub get
+# Run
+flutter run
 # To build it to specifi platform
 flutter create --platform ios .
 flutter create --platform web .
 ```
-
 ### Hello world
 The minimal Flutter app simply calls the [`runApp()`](https://api.flutter.dev/flutter/widgets/runApp.html) function with a widget:
 

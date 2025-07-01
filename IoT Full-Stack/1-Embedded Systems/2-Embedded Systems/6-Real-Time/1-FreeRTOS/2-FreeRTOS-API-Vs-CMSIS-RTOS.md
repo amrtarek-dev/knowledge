@@ -1,14 +1,25 @@
 ## FreeRTOS Native API 
 (used with PlatformIO / raw GCC / Arduino)
 
-|Concept|API|
-|---|---|
-|Task|`xTaskCreate()`|
-|Delay|`vTaskDelay()`|
-|Queue|`xQueueCreate()`, `xQueueSend()`, `xQueueReceive()`|
-|Semaphore|`xSemaphoreCreateBinary()`, `xSemaphoreTake()`, `xSemaphoreGive()`|
-|Scheduler|`vTaskStartScheduler()`|
+| Concept   | API                                                                |
+| --------- | ------------------------------------------------------------------ |
+| Task      | `xTaskCreate()`                                                    |
+| Delay     | `vTaskDelay()`                                                     |
+| Queue     | `xQueueCreate()`, `xQueueSend()`, `xQueueReceive()`                |
+| Semaphore | `xSemaphoreCreateBinary()`, `xSemaphoreTake()`, `xSemaphoreGive()` |
+| Scheduler | `vTaskStartScheduler()`                                            |
+- Task Creation: `xTaskCreate()`
+``` C
+BaseType_t xTaskCreate(
+	TaskFunction_t pvTaskCode,
+	const char * const pcName,
+	configSTACK_DEPTH_TYPE usStackDepth,
+	void * pvParamenters,
+	UBaseType_t uxPriority,
+	TaskHandle_t * pxCreatedTask
+)
 
+```
 ### Blink LED
 ``` C
 #include "FreeRTOS.h"
