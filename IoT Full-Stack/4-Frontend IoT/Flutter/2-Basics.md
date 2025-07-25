@@ -95,9 +95,50 @@ every widget has a build function which is responsible for building the UI of th
 The stateful widgets has a mutable state which can redrawn while the app is running
 
 
+## Flutter PLC
+Flutter project lift cycle
 
+### Planning
+- Clarify Objectives
+- Identify target audience
+- List features
+- Create wireframes
 
+### Designing
+- User Experience
+- User Interface
+- Sketch screen connections
+- Visualize app flow
+- App interface
+- Arrange pre-built widgets
+- Create beautiful screens
+- Customize unique widgets
 
+### Flutter environment
+- Install flutter SDK (flutter.dev)
+- IDE (VScode, Android studio)
+
+### Development
+1. Dart coding
+2. Build UI by widgets
+	1. Statless
+	2. Statefull
+	3. UI Widgets
+3. Implement features
+	1. Core features
+	2. APIs and local storage
+	3. Handle user inputs
+	4. user Flutter and Dart packages
+4. Testing and debugging
+	1. unit testing
+	2. widget testing
+	3. Integration testing
+5. Optimization
+	1. Reduce app size
+	2. Enhance performace
+	3. Ensure compatibility
+6. Deployment
+	1. IOS and Play store
 
 
 ## Sources
