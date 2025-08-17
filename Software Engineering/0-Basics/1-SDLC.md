@@ -38,17 +38,6 @@ In this phase the requirements are gathered, analyzed, documented, and prioritiz
 
 The Output of this phase is a **software requirements specification (SRS)** which where the requirements are documented in, and all stakeholders must agree
 
-### SRS
-Software requirements specifications is the process of collecting and documenting the set of requirements that the software needs to adhere to.
-It may include a set of use cases that describe the business needs and user flows that the software must implement.
-
-SRS  are 4 categories:
-- Functional: Functions of the software
-- External & user interface: Users and interactions with other hardware or software.
-- System features: Functions of the system
-- Nonfunctional: performance, safety, security, quality.
-
-
 #### 2. Design Phase: (Requirements to Architecture)
 In this phase the **requirements** are gathered from the SRS to develop an **architecture** by breaking down requirements into sets of related components.
 
@@ -120,11 +109,11 @@ Types of Releases are intended for different audiences:
 - **GA** (General Availability): Stable version for all users.
 
 ### Documentation:
-- System documentation:
+- **System documentation:**
 It is for technical users (engineers, developers, or architects).
 To Explain how the software operates or how to use it.
 It consists of README files, inline comments, architecture and design documents, verification information, and maintenance guides.
-- User documentation:
+- **User documentation:**
 For non-technical users.
 To assist them in the use of the product.
 In form of user guides, instructional videos and manuals, online help, and inline help.
