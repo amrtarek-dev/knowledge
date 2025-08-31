@@ -1,0 +1,23 @@
+**Documentation** is any form of recorded content that is used for a specific purpose, and it is essential in the field of security.
+effective documentation has three benefits:
+1. Transparency
+2. Standardization
+3. Clarity
+
+### **Transparency**
+In security, transparency is critical for demonstrating compliance with regulations and internal processes, meeting insurance requirements, and for legal proceedings.
+- **Chain of custody** is the process of documenting evidence possession and control during an incident lifecycle.
+
+### **Standardization**
+Standardization through repeatable processes and procedures supports continuous improvement efforts, helps with knowledge transfer, and facilitates the onboarding of new team members.
+- **incident response plan**: is a document that outlines the procedures to take in each step of incident response.
+
+### **Clarity**
+Clear documentation helps people quickly access the information they need so they can take necessary action.
+
+## PlayBook
+A manual that provides details about any operational action.
+Types:
+- Non-automated: Step-by-step actions performed by an analyst.
+- Automated: Automate tasks in incident response process.
+- Semi-automated: Combine a person's action with automation.
