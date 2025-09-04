@@ -2,8 +2,8 @@ As an analyst, you'll detect and respond to incidents and implement actions for 
 
 NIST incident response lifecycle is another NIST framework with additional substeps dedicated to incident response.
 - **Preparation**
-- **Detection / Analysis**
-- **Containment / Recovery**
+- **Detection &Analysis**
+- **Containment Eradication & Recovery**
 - **Post-incident activity**
 
 ## Incident
