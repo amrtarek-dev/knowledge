@@ -55,6 +55,17 @@ True
 True
 ```
 
+### Logical operation
+```python
+>>> Num = 10
+>>> Num >= 5 and Num <=15
+True
+>>> Num != 10 or Num >= 11
+False
+>>> Num not 11
+True
+```
+
 ## Control flow
 
 ### If conditions
@@ -63,32 +74,21 @@ It is a branch execution based on a value expiration
 ```python
 if True:
     print("It's true")
+elif False:
+	print("It's false")
 else:
     pass
 ```
 
 ### Loops
+Iterative Statement
+is a code that repeatedly executes a set of instructions.
 
-#### While loop
-
-While loop is a block of code that will be executed while a condition is True, and stops when it becomes False
-```python
-count = 5
-while count != 0:
-    print(count)
-    count -= 1
-```
-
-You can end a loop on another condition by **break** keyword
-```python
-x = 10
-while True:
-    x -= 1
-    if x == 0:
-        break
-```
+Setting up a loop allows us to repeatedly use a line of code without having to type it multiple times.
 
 #### For loop
+
+`for <> in <>`
 
 For loop is a loop for each item in the loop block (iterable object)
 ```python
@@ -100,8 +100,10 @@ amrtarekhassanabdelghafar
 ```
 
 Incremental for loop
+Using the range(start, until, step) function to create lists.
+or only range(until)
 ```python
->>> for i in range(0,3):
+>>> for i in range(3):
 ...    print(I)
 ...
 012
@@ -126,5 +128,26 @@ enumerate
 (2, 30)
 (4, 20)
 ```
+
+#### While loop
+
+While loop is a block of code that will be executed while a condition is True, and stops when it becomes False
+```python
+count = 5
+while count != 0:
+    print(count)
+    count -= 1
+```
+
+You can end a loop on another condition by **break** keyword
+```python
+x = 10
+while True:
+    x -= 1
+    if x == 0:
+        break
+```
+
+
 
 So now you can start with python modularity and more deep python stuff.

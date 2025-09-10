@@ -164,10 +164,11 @@ It is a sequence of objects which can be the same type or in different types and
 # you can make an empty list by
 >>> a = []
 >>> a.append("apple")
+>>> a.insrt(1, "Banana")
+>>> a.remove("pear")
 ```
 
 #### Dict
-
 It is a fundamental data structure in Python, which depends on mapping keys to values, this is why it is also known as maps or associative arrays, in other words, they are a collection of key-value pairs enclosed in curly braces ({}) where each value is accessed by a unique key.
 
 ```python
@@ -184,7 +185,6 @@ It is a fundamental data structure in Python, which depends on mapping keys to v
 ```
 
 #### Range
-
 It is a sequence representing an arithmetic progression of integers that represents an immutable sequence of numbers, usually used for looping a specific number of times.
 
 ```python
@@ -203,7 +203,6 @@ range(0, 5)
 ```
 
 #### Tuple
-
 Immutable sequences of arbitrary objects that represent an immutable ordered collection of items enclosed in parentheses (()), separated by commas.
 
 ```python
@@ -230,7 +229,6 @@ Immutable sequences of arbitrary objects that represent an immutable ordered col
 ```
 
 #### Set
-
 An unordered collection of unique immutable elements that represents an unordered collection of unique items enclosed in curly braces ({}), where duplicates are automatically removed.
 
 ```python
@@ -258,5 +256,8 @@ Python protocols refer to a set of methods or behaviors that an object can imple
 | Mutable | list, dict, set |
 
 It's worth noting that Python is a dynamically typed language, which means you don't need to explicitly declare the type of a variable. The type is inferred at runtime based on the assigned value.
+
+But since **Python 3.5+**, the language supports **type hints / type annotations** through [PEP 484](https://peps.python.org/pep-0484/)
+
 
 **So now you can start with Python Operators and control flow.**
