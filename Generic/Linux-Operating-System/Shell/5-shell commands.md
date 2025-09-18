@@ -27,3 +27,13 @@ openssl aes-256-cbc -pbkdf2 -a -d -in Q1.encrypted -out Q1.recovered -k ettubrut
 - -in: input file
 - -out: output file
 - -k: the password
+
+## &
+This operator allows you to run commands in the background of your terminal
+
+## &&
+This operator allows you to combine multiple commands together in one line of your terminal.
+The command after && will only execute if the command before && success.
+
+## ||
+The same like && but if the command before the sign fail the command after will execute.

@@ -1,3 +1,5 @@
+Secure Shell is the secured version of the telnet
+
 - Installing OpenSSH on different Linux distributions:
 ```bash
 sudo apt install openssh-server  # Debian/Ubuntu 
