@@ -39,6 +39,8 @@ Risk of SSO when using a single form of authentication
 #### Multi-factor authentication (MFA)
 A security measure which requires a user to verify their identity in two or more ways to access a system or network.
 Using the AAA framework:
+
+### Authentication
 - Something the user know (username, password)
 - Something the user has (OTP)
 - Something the user is (fingerprint)
