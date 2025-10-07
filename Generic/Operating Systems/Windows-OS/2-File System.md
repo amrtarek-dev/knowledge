@@ -6,11 +6,23 @@ In the early 2000s, portable storage devices like USB flash drives became popula
 
 In 2006, Windows Vista introduced the exFAT (Extended File Allocation Table) file system. exFAT was designed to replace FAT32 and supports files larger than 4 GB. While not as advanced as NTFS, it is simpler and more suitable for portable storage devices.
 
+- FAT16 (File allocation Table)
+- FAT32
+- HPFS (High performance File system)
+- NTFS (New Technology File system)
+
 ## NTFS
 
 NTFS is known as a journaling file system. In the event of a failure, the file system can automatically repair folders/files on the disk using information stored in a journal file. This function is not possible with FAT.
 
 NTFS was a significant development at a time when Windows' storage needs were growing and overcame many of FAT's limitations:
+
+NTFS addresses many of the limitations of the previous file systems; such as: 
+
+- Supports files larger than 4GB
+- Set specific permissions on folders and files
+- Folder and file compression
+- Encryption ( Encryption File System or EFS )
 
 Security: NTFS offered a more robust security model by providing permissions to control file access.
 
@@ -72,3 +84,16 @@ Shadow copy is a feature in Windows that allows you to create and store a copy o
 Although it is not covered in detail, it should be noted that this feature is not a means of protection against ransomware attacks.
 
 Malware developers are aware of the shadow copy feature in Windows and can write code to find and delete these files. This can make recovering from a ransomware attack impossible if you don't have an offline backup.
+
+the Volume Shadow Copy Service (VSS) coordinates the required actions to create a consistent shadow copy (also known as a snapshot or a point-in-time copy) of the data that is to be backed up.
+
+Volume Shadow Copies are stored on the System Volume Information folder on each drive that has protection enabled.  
+
+If VSS is enabled (**System Protection** turned on), you can perform the following tasks from within **advanced system settings**. 
+
+- **Create a restore point**
+- **Perform system restore**
+- **Configure restore settings**
+- **Delete restore points**
+
+From a security perspective, malware writers know of this Windows feature and write code in their malware to look for these files and delete them. Doing so makes it impossible to recover from a ransomware attack unless you have an offline/off-site backup.

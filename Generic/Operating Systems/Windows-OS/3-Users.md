@@ -26,7 +26,7 @@ Open the Start menu, type PowerShell, and open it.
 In the prompt, type:
 
 ``` shell
-lusrmgr
+lusrmgr.msc
 ```
 
 In the window that appears, you can manage local users and groups.

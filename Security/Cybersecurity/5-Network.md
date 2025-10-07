@@ -148,6 +148,15 @@ are used at the data link layer
 
 The physical layer corresponds to the physical hardware involved in network transmission.
 
+| Layer Number | Layer Name         | Main Function                                         | Example Protocols and Standards           |
+| ------------ | ------------------ | ----------------------------------------------------- | ----------------------------------------- |
+| Layer 7      | Application layer  | Providing services and interfaces to applications     | HTTP, FTP, DNS, POP3, SMTP, IMAP          |
+| Layer 6      | Presentation layer | Data encoding, encryption, and compression            | Unicode, MIME, JPEG, PNG, MPEG            |
+| Layer 5      | Session layer      | Establishing, maintaining, and synchronising sessions | NFS, RPC                                  |
+| Layer 4      | Transport layer    | End-to-end communication and data segmentation        | UDP, TCP                                  |
+| Layer 3      | Network layer      | Logical addressing and routing between networks       | IP, ICMP, IPSec                           |
+| Layer 2      | Data link layer    | Reliable data transfer between adjacent nodes         | Ethernet (802.3), WiFi (802.11)           |
+| Layer 1      | Physical layer     | Physical data transmission media                      | Electrical, optical, and wireless signals |
 
 ## Operations at the network layer
 A data packet is also referred to as an IP packet for TCP connections or datagram for UDP connections.
@@ -170,6 +179,21 @@ IPv4 format: 4 decimal numbers separated by periods (0-255). 4.3 billion.
 
 IPv6: 8 hexadecimal number separated by colons, each up to 4 hexadecimal digits. (16 bytes total.)
 
+
+### Routing
+routing protocols
+- **OSPF (Open Shortest Path First)**: OSPF is a routing protocol that allows routers to share information about the network topology and calculate the most efficient paths for data transmission. It does this by having routers exchange updates about the state of their connected links and networks. This way, each router has a complete map of the network and can determine the best routes to reach any destination.
+- **EIGRP (Enhanced Interior Gateway Routing Protocol)**: EIGRP is a Cisco proprietary routing protocol that combines aspects of different routing algorithms. It allows routers to share information about the networks they can reach and the cost (like bandwidth or delay) associated with those routes. Routers then use this information to choose the most efficient paths for data transmission.
+- **BGP (Border Gateway Protocol)**: BGP is the primary routing protocol used on the Internet. It allows different networks (like those of Internet Service Providers) to exchange routing information and establish paths for data to travel between these networks. BGP helps ensure data can be routed efficiently across the Internet, even when traversing multiple networks.
+- **RIP (Routing Information Protocol)**: RIP is a simple routing protocol often used in small networks. Routers running RIP share information about the networks they can reach and the number of hops (routers) required to get there. As a result, each router builds a routing table based on this information, choosing the routes with the fewest hops to reach each destination.
+
+
+### NAT
+With the increase in the number of devices connected to the Internet, from computers and smartphones to security cameras and washing machines, it was clear that the IPv4 address space would be depleted quickly. One solution to address depletion is Network Address Translation (NAT).
+
+The idea behind NAT lies in using **one public IP address** to provide Internet access to **many private IP addresses**
+
+NAT-supporting routers maintain a table translating network addresses between internal and external networks. Generally, the internal network would use a private IP address range, while the external network would use a public IP address.
 
 ## Network Protocols
 A set of rules used by two or more devices on a network to describe the order of delivery and the structure of the data.
@@ -327,18 +351,147 @@ Cookies are saved when you receive a "Set-Cookie" header from a web server.
 Cookies can be used for many purposes but are most commonly used for website authentication. The cookie value won't usually be a clear-text string where you can see the password, but a token (unique secret code that isn't easily humanly guessable).
 
 
+### DHCP
+ DHCP: Dynamic Host Configuration Protocol: to assign a unique IP address to each device and provide (DNS server, and default gateway), The server operate on UDP (Port 67), while the client on (UDP port 68)
+
+DHCP follows four steps: Discover, Offer, Request, and Acknowledge (DORA):
+1. **DHCP Discover**: The client broadcasts a DHCPDISCOVER message seeking the local DHCP server if one exists.
+2. **DHCP Offer**: The server responds with a DHCPOFFER message with an IP address available for the client to accept.
+3. **DHCP Request**: The client responds with a DHCPREQUEST message to indicate that it has accepted the offered IP.
+4. **DHCP Acknowledge**: The server responds with a DHCPACK message to confirm that the offered IP address is now assigned to this client.
+
+``` shell
+tshark -r DHCP-G5000.pcap -n 
+1 0.000000 0.0.0.0 → 255.255.255.255 DHCP 342 DHCP Discover - Transaction ID 0xfb92d53f 
+2 0.013904 192.168.66.1 → 192.168.66.133 DHCP 376 DHCP Offer - Transaction ID 0xfb92d53f 
+3 4.115318 0.0.0.0 → 255.255.255.255 DHCP 342 DHCP Request - Transaction ID 0xfb92d53f 
+4 4.228117 192.168.66.1 → 192.168.66.133 DHCP 376 DHCP ACK - Transaction ID 0xfb92d53f
+```
+IP address that a client uses when it sends a DHCP Discover packet 255.255.255.255
+IP address a client uses when trying to get IP network configuration over DHCP 0.0.0.0
+
+### ARP
+ARP: Address Resolution Protocol: (Network access layer protocol in the TCP/IP) which map the IP to MAC address.
+Bridging Layer 3 Addressing to Layer 2 Addressing
+
+ARP is considered layer 2 because it deals with MAC addresses. Others would argue that it is part of layer 3 because it supports IP operations. What is essential to know is that ARP allows the translation from layer 3 addressing to layer 2 addressing.
+
+MAC address used in an ARP Request ff:ff:ff:ff:ff:ff
+
+### ICMP
+Internet Control Message Protocol (ICMP) is mainly used for network diagnostics and error reporting. Two popular commands rely on ICMP, and they are instrumental in network troubleshooting and network security. The commands are:
+
+- `ping`: This command uses ICMP to test connectivity to a target system and measures the round-trip time (RTT). In other words, it can be used to learn that the target is alive and that its reply can reach our system.
+- `traceroute`: This command is called `traceroute` on Linux and UNIX-like systems and `tracert` on MS Windows systems. It uses ICMP to discover the route from your host to the target.
+
+
+### FTP
+Unlike HTTP, which is designed to retrieve web pages, File Transfer Protocol (FTP) is designed to transfer files. As a result
+commands defined by the FTP protocol are:
+- `USER` is used to input the username
+- `PASS` is used to enter the password
+- `RETR` (retrieve) is used to download a file from the FTP server to the client.
+- `STOR` (store) is used to upload a file from the client to the FTP server.
+- `LIST` to list the current directory
+
+``` bash
+ftp 10.10.149.120
+```
+ls -> to list the file
+get -> to download the file.
+
+
+### SMTP
+SMTP: (Simple Mail Transfer Protocol): 
+is used to transmit and route email from the sender to the recipient’s address. 
+it defines how a mail client talks with a mail server and how a mail server talks with another.
+
+Some of the commands used by your mail client when it transfers an email to an SMTP server:
+- `HELO` or `EHLO` initiates an SMTP session
+- `MAIL FROM` specifies the sender’s email address
+- `RCPT TO` specifies the recipient’s email address
+- `DATA` indicates that the client will begin sending the content of the email message
+- `.` is sent on a line by itself to indicate the end of the email message
+
+(plaintext (TCP/UDP port 25)), encrypted (SSL/TLS over TCP/UDP port 587)
+	- MTA (Message Transfer Agent): which searches DNS servers to resolve email addresses to IP addresses.
+
+Receiving Email
+#### Pop3 (port 110)
+Post Office Protocol version 3 (POP3) is designed to allow the client to communicate with a mail server and retrieve email messages.
+POP3 commands are:
+- `USER <username>` identifies the user
+- `PASS <password>` provides the user’s password
+- `STAT` requests the number of messages and total size
+- `LIST` lists all messages and their sizes
+- `RETR <message_number>` retrieves the specified message
+- `DELE <message_number>` marks a message for deletion
+- `QUIT` ends the POP3 session applying changes, such as deletions
+
+``` shell
+telnet 10.10.149.120 110
+AUTH
++OK
+PLAIN
+.
+USER linda
++OK
+PASS Pa$$123
++OK Logged in.
+STAT
++OK 4 2216
+LIST
++OK 4 messages:
+1 690
+2 589
+3 483
+4 454
+.
+RETR 4
++OK 454 octets
+Return-path: <user@client.thm>
+Envelope-to: linda@server.thm
+Delivery-date: Thu, 12 Sep 2024 20:12:42 +0000
+...
+```
+#### IMAP
+IMAP: Internet Message Access Protocol: 
+downloads the header of email and the message content, the emails remains on the server, but it allows the access from multiple devices (Sync across devices).  
+(plaintext (TCP/UDP port 143)), encrypted (SSL/TLS over TCP/UDP port 993)
+
+POP3 is enough when working from one device, e.g., your favourite email client on your desktop computer. However, what if you want to check your email from your office desktop computer and from your laptop or smartphone? In this scenario, you need a protocol that allows synchronization of messages instead of deleting a message after retrieving it. One solution to maintaining a synchronized mailbox across multiple devices is Internet Message Access Protocol (IMAP).
+
+IMAP allows synchronizing read, moved, and deleted messages. IMAP is quite convenient when you check your email via multiple clients. Unlike POP3, which tends to minimize server storage as email is downloaded and deleted from the remote server, IMAP tends to use more storage as email is kept on the server and synchronized across the email clients.
+
+The IMAP protocol commands are more complicated than the POP3 protocol commands. We list a few examples below:
+
+- `LOGIN <username> <password>` authenticates the user
+- `SELECT <mailbox>` selects the mailbox folder to work with
+- `FETCH <mail_number> <data_item_name>` Example `fetch 3 body[]` to fetch message number 3, header and body.
+- `MOVE <sequence_set> <mailbox>` moves the specified messages to another mailbox
+- `COPY <sequence_set> <data_item_name>` copies the specified messages to another mailbox
+- `LOGOUT` logs out
+
+
+
+| **Protocol** | **Transport Protocol** | **Default Port Number** |
+| ------------ | ---------------------- | ----------------------- |
+| TELNET       | TCP                    | 23                      |
+| DNS          | UDP or TCP             | 53                      |
+| HTTP         | TCP                    | 80                      |
+| HTTPS        | TCP                    | 443                     |
+| FTP          | TCP                    | 21                      |
+| SMTP         | TCP                    | 25                      |
+| POP3         | TCP                    | 110                     |
+| IMAP         | TCP                    | 143                     |
 
 
 - SNMP: Simple Network Management protocol: to monitor and managing devices on a network (Application layer)
 - SFTP: Secure File Transfer Protocol: Secure file transfer protocol over SSH (Port 22)
 - NAT (Network Address Translation): The router replace a private source IP address with its public IP address and perform the reverse operation for responses.(Layer 2 (Internet layer), Layer 3 transport layer (TCP/IP model))
-- DHCP: Dynamic Host Configuration Protocol: to assign a unique IP address to each device and provide (DNS server, and default gateway), The server operate on UDP (Port 67), while the client on (UDP port 68)
-- ARP: Address Resolution Protocol: (Network access layer protocol in the TCP/IP) which map the IP to MAC address.
 - Telnet: Application layer protocol clear text communication over TCP (PORT 23).
 - SSH: Secure Shell protocol: encrypted application layer protocol over TCP (PORT 22)
 - POP: Post office protocol: application layer (layer 4 (TCP/IP)) to manage and retrieve email from a mail server. (POP3) is the commonly used version. (plaintext (TCP/UDP port 110)), encrypted (SSL/TLS over TCP/UDP port 995)
-- IMAP: Internet Message Access Protocol: downloads the header of email and the message content, the emails remains on the server, but it allows the access from multiple devices (Sync across devices).  (plaintext (TCP/UDP port 143)), encrypted (SSL/TLS over TCP/UDP port 993)
-- SMTP: (Simple Mail Transfer Protocol): is used to transmit and route email from the sender to the recipient’s address. (plaintext (TCP/UDP port 25)), encrypted (SSL/TLS over TCP/UDP port 587)
-	- MTA (Message Transfer Agent): which searches DNS servers to resolve email addresses to IP addresses.
+
 - SMB: Server Message BlockL 445: This protocol is similar to the File Transfer Protocol (FTP); however, as well as files, SMB allows you to share devices like printers.
 - RDP: Remote Desktop Protocol: 3389: This protocol is a secure means of logging in to a system using a visual desktop interface (as opposed to the text-based limitations of the SSH protocol).
