@@ -9,3 +9,48 @@ telnet <SERVER-IP-ADDRESS> <PORT-NUMBER>
 ```
 
 Default port 23
+
+
+
+Telenet for SMTP (110)
+``` shell
+telnet 10.10.149.120 110
+AUTH
++OK
+PLAIN
+.
+USER linda
++OK
+PASS Pa$$123
++OK Logged in.
+STAT
++OK 4 2216
+LIST
++OK 4 messages:
+1 690
+2 589
+3 483
+4 454
+.
+RETR 4
++OK 454 octets
+Return-path: <user@client.thm>
+Envelope-to: linda@server.thm
+Delivery-date: Thu, 12 Sep 2024 20:12:42 +0000
+...
+```
+
+Telnet for website
+``` shell
+telnet example.com 8008
+
+GET / HTTP/1.1
+Host: example.com
+```
+
+``` shell
+telnet example.com 8008
+
+GET / HTTP/1.1
+Host: localhost
+```
