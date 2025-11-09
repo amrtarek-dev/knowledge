@@ -30,6 +30,11 @@ to just add file to commit and do not change the commit message you can use:
 git commit --amend --no-edit
 ```
 
+And to edit the author only
+```bash
+git commit --amend --no-edit --author="Amr Tarek <amr.tarek@varapps.com>"
+```
+
 to change a really old commit message you can use **rebase** command, when you use rebase it will open an editor and then you can select the required commit first line from "pick" to "reword" or just "r", and then save.
 
 ```bash

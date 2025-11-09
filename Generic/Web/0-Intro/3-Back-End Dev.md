@@ -42,6 +42,8 @@ Python Framework:
 - Flask
 
 ## Databases
+A **Database** is where information can be stored, modified, and retrieved. A web application may want to store and retrieve information about a visitor's preferences on what to show or not; this would be stored in a database. A planet may have more advanced inhabitants who store information about locations in maps, write notes in a diary or put books in a library and files in a filing cabinet.
+
 Languages and tools for working with databases:
 - Structure Query Language (SQL)
 - Object-Relational Mapping (ORM)
